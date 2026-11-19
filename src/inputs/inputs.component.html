@@ -1,0 +1,56 @@
+<section class="investment-form">
+
+  <div class="card-header">
+    <h2>Investment Details</h2>
+    <p>Enter your assumptions to project potential investment growth.</p>
+  </div>
+
+  <form class="form-grid">
+
+    <div class="input-group">
+      <label>Initial Investment</label>
+      <input
+        type="number"
+        name="initialInvestment"
+        placeholder="R 10,000"
+        [(ngModel)]="initialInvestment"
+      >
+    </div>
+
+    <div class="input-group">
+      <label>Annual Investment</label>
+      <input
+        type="number"
+        name="annualInvestment"
+        placeholder="R 12,000"
+        [(ngModel)]="annualInvestment"
+      >
+    </div>
+
+    <div class="input-group">
+      <label>Expected Return (%)</label>
+      <input
+        type="number"
+        placeholder="8"
+        name="interest"
+        [(ngModel)]="interest"
+      >
+    </div>
+
+    <div class="input-group">
+      <label>Duration (Years)</label>
+      <input
+        type="number"
+        placeholder="10"
+        name="duration"
+        [(ngModel)]="duration"
+      >
+    </div>
+
+  </form>
+
+  <button class="calculate-btn" (click)="showResults()">
+    Calculate Investment Growth
+  </button>
+
+</section>

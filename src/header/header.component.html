@@ -1,0 +1,31 @@
+<header class="hero-header">
+
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>
+        WT - Investment
+        <span>Calculator</span>
+      </h1>
+
+      <p>
+        Calculate how your investments grow with compound interest,
+        recurring contributions and long-term wealth planning.
+      </p>
+    </div>
+
+    <div class="image-container">
+     <img
+     src="assets/images/investmentt.png"
+     alt="Investment Illustration"
+     class="hero-image">
+    </div>
+
+    <app-inputs (DatatoTransfer)="displayPop($event)" ()></app-inputs>
+
+  </div>
+   @if(showResultsModal){
+
+    <app-results (canceltab)="closeTab()" [Data]="Data"></app-results>
+}
+</header>
